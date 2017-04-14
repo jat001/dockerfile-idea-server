@@ -3,9 +3,9 @@
     "containerDefinitions": [
         {
             "name": "idea",
-            "image": "jat001/idea:0.0.2",
+            "image": "jat001/idea:0.0.3",
             "essential": true,
-            "memory": 512,
+            "memory": 256,
             "portMappings": [
                 {
                     "hostPort": 80,
