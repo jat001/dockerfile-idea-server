@@ -1,5 +1,8 @@
 FROM alpine:latest
 
+LABEL author="Jat <chat@jat.email>"
+LABEL version="0.0.2"
+
 COPY IntelliJIDEALicenseServer /usr/local/bin
 
 EXPOSE 8017

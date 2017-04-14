@@ -1,12 +1,17 @@
 {
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "jat001/idea",
-    "Update": "true"
-  },
-  "Ports": [
-    {
-      "ContainerPort": "8017"
-    }
-  ]
+    "AWSEBDockerrunVersion": "2",
+    "containerDefinitions": [
+        {
+            "name": "idea",
+            "image": "jat001/idea:0.0.2",
+            "essential": true,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 8017
+                }
+            ]
+        }
+    ]
 }

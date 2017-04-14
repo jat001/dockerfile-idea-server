@@ -1,6 +1,0 @@
-idea:
-  image: 'jat001/idea'
-  ports:
-    - '80:8017/tcp'
-  container_name: 'idea'
-  restart: always
