@@ -4,11 +4,12 @@ services:
 install: true
 
 before_script:
+  - '[ "$TRAVIS_TAG" ] || travis_terminate 0'
   - docker login -u=jat001 -p="$DOCKER_PASSWD"
 
 script:
-  - docker build -t jat001/idea:$TRAVIS_TAG --build-arg VER=$TRAVIS_TAG .
-  - docker tag jat001/idea:$TRAVIS_TAG jat001/idea:latest
+  - docker build -t "jat001/idea:$TRAVIS_TAG" --build-arg "VER=$TRAVIS_TAG" .
+  - docker tag "jat001/idea:$TRAVIS_TAG" jat001/idea:latest
 
-  - docker push jat001/idea:$TRAVIS_TAG
+  - docker push "jat001/idea:$TRAVIS_TAG"
   - docker push jat001/idea:latest
