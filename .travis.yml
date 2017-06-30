@@ -10,5 +10,5 @@ script:
   - docker build -t jat001/idea:$TRAVIS_TAG --build-arg VER=$TRAVIS_TAG .
   - docker tag jat001/idea:$TRAVIS_TAG jat001/idea:latest
 
-  - docker push jat001/archisteamfarm:$TRAVIS_TAG
-  - docker push jat001/archisteamfarm:latest
+  - docker push jat001/idea:$TRAVIS_TAG
+  - docker push jat001/idea:latest
