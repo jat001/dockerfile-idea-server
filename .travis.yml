@@ -1,6 +1,9 @@
 services:
   - docker
 
+env:
+  - NAME=jat001/idea
+
 install: true
 
 before_script:
@@ -9,7 +12,7 @@ before_script:
 
 script:
   - docker build -t "jat001/idea:$TRAVIS_TAG" --build-arg "VER=$TRAVIS_TAG" .
-  - docker tag "jat001/idea:$TRAVIS_TAG" jat001/idea:latest
+  - docker tag "jat001/idea:$TRAVIS_TAG" "jat001/idea:latest"
 
   - docker push "jat001/idea:$TRAVIS_TAG"
-  - docker push jat001/idea:latest
+  - docker push "jat001/idea:latest"
