@@ -10,4 +10,4 @@ RUN chmod 755 /usr/local/bin/idea
 EXPOSE 8017
 
 ENTRYPOINT ["/usr/local/bin/idea"]
-CMD ["-p", "8017", "-u", "Jat"]
+CMD ["-port", "8017"]
